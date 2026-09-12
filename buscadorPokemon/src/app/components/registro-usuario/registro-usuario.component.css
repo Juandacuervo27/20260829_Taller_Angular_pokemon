@@ -1,0 +1,307 @@
+/* ==============================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+================================= */
+
+.form-container {
+  width: 92%;
+  max-width: 850px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+
+/* ==============================
+   ENCABEZADO
+================================= */
+
+.form-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.form-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.form-header h2::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+}
+
+.form-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+
+/* ==============================
+   FILAS DEL FORMULARIO
+================================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* ==============================
+   GRUPOS
+================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+
+/* ==============================
+   INPUTS Y SELECT
+================================= */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #cbd5e1;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  background: white;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  transform: translateY(-1px);
+}
+
+
+/* ==============================
+   CHECKBOX
+================================= */
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0 25px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #2563eb;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-group label {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #475569;
+  cursor: pointer;
+}
+
+.checkbox-group a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==============================
+   BOTÓN
+================================= */
+
+.btn-submit {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+  transition: all 0.25s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+
+/* ==============================
+   INFORMACIÓN DEL USUARIO
+================================= */
+
+.user-info {
+  margin-top: 35px;
+  padding: 25px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #eff6ff,
+    #ecfeff
+  );
+  border: 1px solid #bae6fd;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  animation: aparecer 0.4s ease;
+}
+
+.user-info h3 {
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.user-info p {
+  margin-bottom: 10px;
+  color: #475569;
+}
+
+.user-info strong {
+  color: #1e293b;
+}
+
+
+/* ==============================
+   ANIMACIÓN
+================================= */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  background: rgba(15, 23, 42, 0.75);
+}
+
+
+/* ==============================
+   VALIDACIÓN HTML
+================================= */
+
+.form-group input:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+}
+
+.form-group input:valid:not(:placeholder-shown) {
+  border-color: #22c55e;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 700px) {
+
+  .form-container {
+    width: 94%;
+    padding: 25px 20px;
+    margin: 25px auto;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .checkbox-group {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,48 @@
+<div>
+  <form (ngSubmit)="buscarPokemon()">
+    
+
+    <div>
+      <label> Inserte el nombre del Pokemon >:D</label>
+      <input
+      type = "text"
+      [(ngModel)]="nombrePokemonInput"
+      name="nombrePokemon"
+      placeholder="Ej. Pikachu, Charmander, Bulbasaur"
+      required
+      />
+    </div>
+    <div>
+      <button type="submit" [disabled]="cargando()" > {{ cargando()? 'Escaneando...' : 'Buscar'}} </button>
+    </div>
+  
+  </form>
+</div>
+
+@if (mensajeError()){
+  <p class="error">{{mensajeError()}}</p>
+}
+
+@if(pokemon(); as poke){
+
+  <div appResaltarTarjeta colorBorde="#0000ff" class="card-pokemon">
+    <h3>{{poke.name}} (#{{poke.id}})</h3>
+    <img [src]="poke.image"/>
+
+    <p>
+      Tipo:
+      <span class="badge-tipo" [ngStyle]="{
+        'backgroud-color' : poke.type === 'fire' ? '#ff0000' : 
+                            poke.type === 'water' ? '#0000ff' :
+                            poke.type === 'grass' ? '#2E6F40' : '#cccccc'
+      }"> 
+    {{poke.type}} </span>
+    </p>
+
+    <p>Exp Base: <strong>{{poke.baseExperience}}</strong></p>
+    <button class="btn-guardar" (click)="guardarEnEquipo()">
+      Almacenar en Invertario
+    </button>
+
+  </div>
+}

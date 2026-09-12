@@ -1,2 +1,2 @@
-# 20260829_Taller_Angular_pokemon
-proyecto 20260829_Taller_Angular_pokemon
+# 20260829_Taller_Angular_Pokemon
+Este repositorio trata sobre una actividad sobre Angular
