@@ -1,0 +1,2 @@
+# 20260829_Taller_Angular_pokemon
+proyecto 20260829_Taller_Angular_pokemon
